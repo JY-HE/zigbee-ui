@@ -1,32 +1,32 @@
 <template>
     <transition name="dialog-fade">
         <!-- 遮罩 -->
-        <div class="cl-dialog_wrapper" v-if="visible" :style="modalStyle" @click.self="modalClick">
+        <div class="zb-dialog_wrapper" v-if="visible" :style="modalStyle" @click.self="modalClick">
             <div
-                :class="['cl-dialog', mimicry ? 'is-mimicry' : '']"
+                :class="['zb-dialog', mimicry ? 'is-mimicry' : '']"
                 :style="{ width: width, 'margin-top': top }"
             >
-                <div class="cl-dialog_header">
+                <div class="zb-dialog_header">
                     <!-- title 可通过具名 slot 传入 -->
                     <slot name="title">
-                        <span class="cl-dialog_title">{{ title }}</span>
+                        <span class="zb-dialog_title">{{ title }}</span>
                     </slot>
-                    <cl-button
-                        icon="cl-icon-qingchu-miaobian"
-                        class="cl-dialog_header_button"
+                    <zb-button
+                        icon="zb-icon-qingchu-miaobian"
+                        class="zb-dialog_header_button"
                         @click.stop="closeDialog"
                         type="text"
                         v-if="showClose"
-                    ></cl-button>
+                    ></zb-button>
                 </div>
-                <div class="cl-dialog_body">
+                <div class="zb-dialog_body">
                     <slot></slot>
                 </div>
-                <div class="cl-dialog_footer" v-if="isShowFooter">
+                <div class="zb-dialog_footer" v-if="isShowFooter">
                     <!-- footer 可通过具名 slot 传入 -->
                     <slot name="footer">
-                        <cl-button @click.stop="closeDialog">取消</cl-button>
-                        <cl-button type="primary" @click.stop="determine">确定</cl-button>
+                        <zb-button @click.stop="closeDialog">取消</zb-button>
+                        <zb-button type="primary" @click.stop="determine">确定</zb-button>
                     </slot>
                 </div>
             </div>
@@ -36,7 +36,7 @@
 
 <script>
 export default {
-    name: 'ClDialog',
+    name: 'ZbDialog',
     props: {
         // Dialog 的标题
         title: {
@@ -138,7 +138,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cl-dialog_wrapper {
+.zb-dialog_wrapper {
     position: fixed;
     top: 0;
     right: 0;
@@ -148,7 +148,7 @@ export default {
     margin: 0;
     z-index: 2001;
     background-color: rgba(0, 0, 0, 0.5);
-    .cl-dialog {
+    .zb-dialog {
         position: relative;
         margin: 15vh auto 50px;
         background: #fff;
@@ -160,12 +160,12 @@ export default {
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
-            .cl-dialog_title {
+            .zb-dialog_title {
                 line-height: 24px;
                 font-size: 20px;
                 color: #303133;
             }
-            .cl-dialog_header_button {
+            .zb-dialog_header_button {
                 padding: 0;
                 background: transparent;
                 border: none;
@@ -187,13 +187,13 @@ export default {
             padding: 10px 20px;
             text-align: right;
             box-sizing: border-box;
-            .cloud-button:first-child {
+            .zb-button:first-child {
                 margin-right: 20px;
             }
         }
     }
     // 拟态风格
-    .cl-dialog.is-mimicry {
+    .zb-dialog.is-mimicry {
         border-radius: 12px;
         box-shadow: inset 7px 14px 23px #dadada, inset -7px -14px 23px #eeeeee;
     }
