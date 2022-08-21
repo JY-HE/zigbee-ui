@@ -2,7 +2,7 @@
     <div id="app">
         <cl-button type="info" @click="show = true">信息按钮</cl-button>
 
-        <cl-dialog title="温馨提示" :visible.sync="show" @close="determine" appendToBody>
+        <cl-dialog title="温馨提示" :visible.sync="show" appendToBody>
             <template v-slot:title> 自定义标题 </template>
             <template> 内容 </template>
             <template v-slot:footer>
@@ -21,11 +21,7 @@ export default {
             show: false,
         };
     },
-    methods: {
-        determine() {
-            console.log('11111111111111');
-        },
-    },
+    methods: {},
 };
 </script>
 
