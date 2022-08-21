@@ -1,8 +1,8 @@
 <template>
     <button
-        class="cloud-button"
+        class="zb-button"
         :class="[
-            `cloud-button-${type}`,
+            `zb-button-${type}`,
             {
                 'is-plain': plain,
                 'is-round': round,
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-    name: 'ClButton',
+    name: 'ZbButton',
     props: {
         // 按钮类型
         type: {
@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="scss">
-.cloud-button {
+.zb-button {
     display: inline-block;
     line-height: 1;
     white-space: nowrap;
@@ -134,7 +134,7 @@ export default {
 }
 
 // 主要按钮
-.cloud-button-primary {
+.zb-button-primary {
     color: #fff;
     background-color: #409eff;
     border-color: #409eff;
@@ -161,7 +161,7 @@ export default {
 }
 
 // 成功按钮
-.cloud-button-success {
+.zb-button-success {
     color: #fff;
     background-color: #67c23a;
     border-color: #67c23a;
@@ -187,7 +187,7 @@ export default {
 }
 
 // 信息按钮
-.cloud-button-info {
+.zb-button-info {
     color: #fff;
     background-color: #909399;
     border-color: #909399;
@@ -213,7 +213,7 @@ export default {
 }
 
 // 警告按钮
-.cloud-button-warning {
+.zb-button-warning {
     color: #fff;
     background-color: #e6a23c;
     border-color: #e6a23c;
@@ -239,7 +239,7 @@ export default {
 }
 
 // 危险按钮
-.cloud-button-danger {
+.zb-button-danger {
     color: #fff;
     background-color: #f56c6c;
     border-color: #f56c6c;
@@ -265,7 +265,7 @@ export default {
 }
 
 // 文本按钮
-.cloud-button-text {
+.zb-button-text {
     color: #606266;
     border-color: transparent;
     background: transparent;
@@ -285,7 +285,7 @@ export default {
 }
 
 // icon样式
-.cloud-button [class*='cl-icon-'] + span {
+.zb-button [class*='zb-icon-'] + span {
     margin-left: 5px;
 }
 </style>
