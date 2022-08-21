@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <cl-button type="info" @click="show = true">信息按钮</cl-button>
+        <!-- <cl-button type="info" @click="show = true">信息按钮</cl-button> -->
 
         <cl-dialog title="温馨提示" :visible.sync="show" appendToBody>
             <template v-slot:title> 自定义标题 </template>
